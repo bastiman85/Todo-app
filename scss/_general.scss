@@ -237,6 +237,12 @@ input:checked + label .select {
       }
    }
 
+   input:checked + label .select {
+      &::before {
+         top: 50%;
+      }
+   }
+
    .items label {
       padding-block: 0.4em 0.3em;
    }

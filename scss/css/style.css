@@ -799,6 +799,10 @@ input:checked + label .select::before {
       opacity: 1;
     }
   }
+  input:checked + label .select::before {
+    top: 50%;
+  }
+
   .items label {
     padding-block: 0.4em 0.3em;
   }

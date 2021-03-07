@@ -878,6 +878,10 @@ input:checked + label .select::before {
       opacity: 1;
     }
   }
+  input:checked + label .select::before {
+    top: 50%;
+  }
+
   .items label {
     padding-top: 0.4em;
     padding-bottom: 0.3em;
