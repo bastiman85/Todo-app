@@ -10,11 +10,8 @@ const clear = document.querySelector(".clear");
 let left = 5;
 let itemCount = 6;
 
-// checkUnchecked();
-
 function setLeft() {
    leftSpan.textContent = left;
-   // localStorage.setItem("left", left);
 }
 
 setLeft();
@@ -41,23 +38,11 @@ function update() {
 
 update();
 
-// function checkUnchecked() {
-//    for (var i = 0; i < checkboxes.length; i++) {
-//       if (checkboxes[i].checked) {
-//       } else {
-//          left++;
-//       }
-//       setLeft();
-//    }
-// }
-
 function removeParents(e) {
    if (e.currentTarget.parentNode.previousElementSibling.checked) {
       console.log(e.currentTarget);
       e.currentTarget.removeEventListener("click", removeParents, true);
       e.currentTarget.parentNode.parentNode.remove();
-      // e.currentTarget.parentNode.previousElementSibling.remove();
-      // e.currentTarget.parentNode.remove();
    } else {
       e.currentTarget.removeEventListener("click", removeParents, true);
       e.currentTarget.parentNode.parentNode.remove();
@@ -67,6 +52,9 @@ function removeParents(e) {
 }
 
 function addTask(task) {
+   if (task == "") {
+      return;
+   }
    let content = template.content.cloneNode(true);
    let label = content.querySelector("label");
    let input = content.querySelector("input");
@@ -101,8 +89,6 @@ function addTask(task) {
 
    setLeft();
    taskInput.value = "";
-
-   // return clone;
 }
 
 taskInput.addEventListener("keypress", function (e) {
@@ -114,7 +100,6 @@ taskInput.addEventListener("keypress", function (e) {
 function clearAll() {
    for (var i = 0; i < select.length; i++) {
       if (select[i].previousElementSibling.checked) {
-         // select[i].previousElementSibling.remove();
          select[i].parentNode.remove();
       }
    }
@@ -128,10 +113,8 @@ function filterActive() {
    for (var i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {
          checkboxes[i].parentNode.style.display = "none";
-         // checkboxes[i].style.display = "none";
       } else {
          checkboxes[i].parentNode.style.display = "block";
-         // checkboxes[i].style.display = "inline-block";
       }
    }
    document.querySelector(".active").classList.remove("active");
@@ -146,10 +129,8 @@ function filterComplete() {
    for (var i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {
          checkboxes[i].parentNode.style.display = "block";
-         // checkboxes[i].style.display = "inline-block";
       } else {
          checkboxes[i].parentNode.style.display = "none";
-         // checkboxes[i].style.display = "none";
       }
    }
    document.querySelector(".active").classList.remove("active");
@@ -163,7 +144,6 @@ function filterAll() {
    checkboxes = document.querySelectorAll("input[type='checkbox']");
    for (var i = 0; i < checkboxes.length; i++) {
       checkboxes[i].parentNode.style.display = "block";
-      // checkboxes[i].style.display = "inline-block";
    }
    document.querySelector(".active").classList.remove("active");
    document.querySelector(".all").classList.add("active");

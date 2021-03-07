@@ -11,78 +11,10 @@
    }
 }
 
-.flow-content > * + * {
-   margin-top: var(--flow-space, var(--spacer));
-}
-
-.flow-content--large {
-   --flow-space: 2rem;
-}
-
-.flow-content--x-large {
-   --flow-space: 2.5rem;
-}
-
-.center {
-   text-align: center;
-}
-
-.right {
-   text-align: right;
-   margin-right: 30px;
-}
-
-.btn {
-   cursor: pointer;
-   display: inline-block;
-   text-decoration: none;
-   background-color: rgb(255, 0, 0);
-   color: white;
-
-   &:hover,
-   &:focus {
-      background-color: rgba(255, 0, 0, 0.5);
-      box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.5);
-   }
-
-   &:active {
-      box-shadow: inset 0px 10px 38px -10px rgba(0, 0, 0, 0.5);
-   }
-}
-
 .row {
    display: flex;
    justify-content: space-between;
    align-items: center;
-}
-
-.split {
-   display: flex;
-   justify-content: space-between;
-}
-
-@media (min-width: 75em) {
-   .split {
-      flex-direction: row;
-   }
-
-   .split > * {
-      flex-basis: 100%;
-   }
-
-   .split > * + * {
-      margin: 0 0 0 var(--gap, var(--spacer));
-   }
-}
-
-@media (max-width: 75em) {
-   .split {
-      flex-direction: column;
-   }
-
-   .split > * + * {
-      margin: calc(var(--spacer) * 3) 0 0 0;
-   }
 }
 
 .grid {
