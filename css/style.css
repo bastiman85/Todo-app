@@ -423,6 +423,10 @@ a[target=_blank]::after {
   }
 }
 
+.center {
+  text-align: center;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
