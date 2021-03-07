@@ -1,0 +1,26 @@
+/* ** HEADER ** */
+header {
+   background-image: var(--header-bg-mobile);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center top 20%;
+   padding-top: 2rem;
+   padding-bottom: 6rem;
+
+   @media (min-width: 33.75em) {
+      background-image: var(--header-bg-desktop);
+      padding-bottom: 10.5rem;
+      padding-top: 4rem;
+   }
+}
+
+.site-title {
+   font-size: 1.8rem;
+   text-transform: uppercase;
+   letter-spacing: 0.4em;
+   margin-bottom: -5px;
+
+   @media (min-width: 33.75em) {
+      font-size: 1.8rem;
+   }
+}

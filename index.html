@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+      <link rel="stylesheet" href="css/style.css" />
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/utils/Draggable.min.js"></script>
+      <title>Frontend Mentor | Todo app</title>
+   </head>
+   <body>
+      <div class="dIExplorer">
+         <p>Your browser is outdated and a security risk</p>
+         <p>please upgrade to one of the following:</p>
+         <div class="browsers">
+            <a href="https://www.mozilla.org/firefox/new/"><img src="/assets/firefoxbrowser.svg" alt="Mozilla Firefox" style="width: 0px" /></a>
+            <a href="https://www.google.com/chrome/"><img src="/assets/googlechrome.svg" alt="Google Chrome" style="width: 0px" /></a>
+            <a href="https://www.microsoft.com/edge"><img src="/assets/microsoftedge.svg" alt="Microsoft Edge" style="width: 0px" /></a>
+         </div>
+      </div>
+
+      <header>
+         <div class="container row">
+            <h1 class="site-title">Todo</h1>
+            <div id="dark-mode" title="Dark Mode" data-flow="left">
+               <span class="dark-mode--span">
+                  <i class="icon-moon"></i>
+               </span>
+            </div>
+         </div>
+      </header>
+
+      <main class="container">
+         <div class="grid">
+            <div class="new-item">
+               <span></span>
+               <input type="text" placeholder="Create a new todo..." />
+            </div>
+            <div class="existing-items grid">
+               <div class="items">
+                  <div class="item">
+                     <input type="checkbox" name="item-1" value="Complete online JavaScript course" id="item-1" checked />
+                     <label for="item-1"><span class="select"></span>Complete online JavaScript course<span class="remove"></span></label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" name="item-2" value="Jog around the park 3x" id="item-2" />
+                     <label for="item-2"><span class="select"></span>Jog around the park 3x<span class="remove"></span></label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" name="item-3" value="10 minutes meditation" id="item-3" />
+                     <label for="item-3"><span class="select"></span>10 minutes meditation<span class="remove"></span></label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" name="item-4" value="Read for 1 hour" id="item-4" />
+                     <label for="item-4"><span class="select"></span>Read for 1 hour<span class="remove"></span></label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" name="item-5" value="Pick up groceries" id="item-5" />
+                     <label for="item-5"><span class="select"></span>Pick up groceries<span class="remove"></span></label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" name="item-6" value="Complete Todo App on Frontend Mentor" id="item-6" />
+                     <label for="item-6"><span class="select"></span>Complete Todo App on Frontend Mentor<span class="remove"></span></label>
+                  </div>
+               </div>
+               <div class="action-bar grid">
+                  <p class="left"><span></span> items left</p>
+                  <p class="clear">Clear Completed</p>
+                  <p class="filter center">
+                     <span class="all active">All</span>
+                     <span class="unfinished">Active</span>
+                     <span class="completed">Completed</span>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </main>
+      <p class="reorder center">Drag and drop to reorder list</p>
+      <div class="attribution center">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://linktr.ee/SebastianS" target="_blank">Sebastian Söderström</a>.</div>
+
+      <template>
+         <div class="item">
+            <input type="checkbox" name="" value="" id="" />
+            <label for=""></label>
+         </div>
+      </template>
+
+      <script src="js/main.js"></script>
+      <script src="js/dragndrop.js"></script>
+      <script src="js/darkmode.js"></script>
+      <script src="js/acclink.js"></script>
+   </body>
+</html>
